@@ -1,0 +1,42 @@
+{
+    "name": "http-call-monitor/laravel",
+    "description": "See latency and failure rate for every third-party API your Laravel app calls.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "http-client",
+        "monitoring",
+        "observability"
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HttpCallMonitor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HttpCallMonitor\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HttpCallMonitor\\HttpCallMonitorServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
